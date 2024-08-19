@@ -1,14 +1,49 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
-    <title>legado</title>
-    <style type="text/css">
-      @import url("index.css");
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>产品详情页</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h2>欢迎来到</h2>
-    <h3>legado的个人博客</h3>
-    <p>一个网页</p>
+    <div class="product-container">
+      <img src="xh.jpg" alt="产品图片" class="product-image" />
+      <div class="product-info">
+        <h2 class="product-title">产品名称：小黄</h2>
+        <p class="product-description">
+          我们不生产小黄，我们只是小黄的搬运工。
+        </p>
+        <div class="price-list">
+          <p>价格列表：</p>
+          <ul>
+            <li>标准版: 99元</li>
+            <li>高级版: 199元</li>
+            <li>豪华版: 299元</li>
+          </ul>
+        </div>
+        <button class="purchase-button" onclick="showModal()">立即购买</button>
+      </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="myModal" class="modal">
+      <span class="close" onclick="hideModal()">&times;</span>
+      <img class="modal-content" id="img01" />
+    </div>
+
+    <script>
+      function showModal() {
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("img01");
+        img.src = "fkm.jpg";
+        modal.style.display = "block";
+      }
+
+      function hideModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+      }
+    </script>
   </body>
 </html>
